@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>iSwitch Project</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f7f9fc;
+    color:#333;
+}
+
+/* HEADER */
+
+.hero{
+    height:70vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    color:white;
+    position:relative;
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.65),
+            rgba(0,0,0,0.65)
+        ),
+        url('assets/imgs/wipro.jpg');
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+.hero::before{
+    content:'';
+    position:absolute;
+    width:500px;
+    height:500px;
+    background:rgba(255,255,255,.1);
+    border-radius:50%;
+    top:-200px;
+    right:-100px;
+    animation:float 6s infinite;
+}
+
+.hero::after{
+    content:'';
+    position:absolute;
+    width:350px;
+    height:350px;
+    background:rgba(255,255,255,.1);
+    border-radius:50%;
+    bottom:-150px;
+    left:-100px;
+    animation:float 8s infinite;
+}
+
+@keyframes float{
+    50%{
+        transform:translateY(-20px);
+    }
+}
+
+.hero h1{
+    font-size:60px;
+    margin-bottom:10px;
+    animation:slideDown 1s ease;
+}
+
+.hero p{
+    font-size:20px;
+    animation:fadeIn 2s ease;
+}
+
+@keyframes slideDown{
+    from{
+        transform:translateY(-50px);
+        opacity:0;
+    }
+    to{
+        transform:translateY(0);
+        opacity:1;
+    }
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+/* CONTENT */
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:60px 20px;
+}
+
+.project-card{
+    background:white;
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    margin-bottom:30px;
+    transition:.4s;
+}
+
+.project-card:hover{
+    transform:translateY(-10px);
+}
+
+.project-img{
+    width:100%;
+    border-radius:15px;
+    margin-bottom:20px;
+}
+
+.title{
+    color:#ff6b35;
+    margin-bottom:20px;
+}
+
+.tech{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:15px;
+}
+
+.tech span{
+    background:#ff6b35;
+    color:white;
+    padding:8px 15px;
+    border-radius:30px;
+    font-size:14px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+}
+
+.feature-card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    transition:.4s;
+}
+
+.feature-card:hover{
+    transform:translateY(-8px);
+}
+
+.feature-card h3{
+     color:#ff6b35;
+    margin-bottom:15px;
+}
+
+.back-btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 25px;
+     background:#ff6b35;
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+}
+
+.back-btn:hover{
+    background:#0056d2;
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+    <h1>Wipro Hydraulics Software</h1>
+    <p>Industrial Management Application</p>
+</section>
+
+<div class="container">
+
+    <div class="project-card">
+
+        <img src="assets/imgs/iswitch-banner.jpg"
+             class="project-img"
+             alt="Project Image">
+
+        <h2 class="title">Project Overview</h2>
+
+   <p>
+        Worked on industrial software solutions for Wipro Hydraulics.
+        Developed modules for operational monitoring, data management,
+        and reporting dashboards.
+    </p>
+
+    <div class="tech">
+        <span>React JS</span>
+        <span>Node JS</span>
+        <span>SQL</span>
+        <!-- <span>REST API</span> -->
+    </div>
+
+    </div>
+
+    <div class="grid">
+
+        <div class="feature-card">
+    <h3>Responsibilities</h3>
+    <ul>
+        <li>Frontend Development</li>
+        <li>API Integration</li>
+        <li>Dashboard Design</li>
+        <li>Database Operations</li>
+        <li>Bug Resolution</li>
+    </ul>
+</div>
+
+        <div class="feature-card">
+    <h3>Features</h3>
+    <ul>
+        <li>Industrial Monitoring</li>
+        <li>Production Tracking</li>
+        <li>Reports Generation</li>
+        <li>User Authentication</li>
+        <li>Data Analytics</li>
+    </ul>
+</div>
+
+        <div class="feature-card">
+            <h3>Project Information</h3>
+            <ul>
+                <li>Company : Mayilveera Tech solutions</li>
+                <li>Role : ReactJS Developer</li>
+                <li>Duration : 1+ Year</li>
+                <!-- <li>Team Size : 10+</li> -->
+            </ul>
+        </div>
+
+    </div>
+
+    <a href="index.html" class="back-btn">
+        ← Back To Portfolio
+    </a>
+
+</div>
+
+</body>
+</html>

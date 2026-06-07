@@ -12318,3 +12318,17 @@ pre .code {
     visibility: visible;
     transform: translateX(-50%) translateY(0);
 }
+.portfolio-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.portfolio-row > div {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.port-card {
+    width: 100%;
+    height: 100%;
+}
